@@ -1,7 +1,12 @@
 self.__BUILD_MANIFEST = {
   "__rewrites": {
     "afterFiles": [],
-    "beforeFiles": [],
+    "beforeFiles": [
+      {
+        "source": "/ghibli.aiseo.one-main//_next/:path+",
+        "destination": "/ghibli.aiseo.one-main/_next/:path+"
+      }
+    ],
     "fallback": []
   },
   "sortedPages": [
