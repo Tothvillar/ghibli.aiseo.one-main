@@ -176,7 +176,7 @@ export default function Home() {
         const requestData = {
           prompt: enhancedPrompt,
           sync_mode: false,
-          model: "gpt-image2", // 使用Sora图像模型
+          model: "gpt-image-2", // 使用Sora图像模型
           n: 1, // 生成1张图片,
           size: imageSize // 使用用户选择的尺寸
         };
