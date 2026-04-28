@@ -17,7 +17,7 @@ const ShowCases: React.FC<ShowCasesProps> = ({ ossHost }) => {
   useEffect(() => {
     const loadCases = async () => {
       try {
-        const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_PATH}/data/case.json`);
+        const response = await fetch('/data/case.json');
         if (!response.ok) {
           throw new Error('Failed to fetch case data');
         }
@@ -176,7 +176,7 @@ export default function Home() {
         const requestData = {
           prompt: enhancedPrompt,
           sync_mode: false,
-          model: "gpt-image-2-all", // 使用Sora图像模型
+          model: "sora_image", // 使用Sora图像模型
           n: 1, // 生成1张图片,
           size: imageSize // 使用用户选择的尺寸
         };
@@ -393,7 +393,7 @@ export default function Home() {
                 X API
               </a>
               <a
-                href="https://nano.xlap.top"
+                href="https://nano.aiseo.one"
                 target="_blank"
                 rel="noopener noreferrer"
                 title="纳米香蕉"
@@ -402,7 +402,7 @@ export default function Home() {
                 Nano Banana X
               </a>
               <a
-                href="https://sora.xlap.top"
+                href="https://sora.aiseo.one"
                 target="_blank"
                 rel="noopener noreferrer"
                 title="Sora2X"
@@ -693,7 +693,7 @@ export default function Home() {
                 }}
               >
                 <Image
-                  src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/qrcode.png`}
+                  src="/images/qrcode.png"
                   alt="联系二维码"
                   width={150}
                   height={150}
